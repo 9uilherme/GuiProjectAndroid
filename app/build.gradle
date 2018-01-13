@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+/* Manifesto */
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "br.ufg.inf.guiproject"
+        minSdkVersion 17
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+
+        debug {
+            debuggable true
+            minifyEnabled false
+        }
+
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    /* Add aqui outras dependências : compile 'biblioteca' */
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'pa1pal.sendbutton.lib:lib:1.0'
+    testCompile 'junit:junit:4.12'
+}

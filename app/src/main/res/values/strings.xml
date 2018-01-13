@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GuiProject</string>
+    <string name="hint_password">Entre seu password</string>
+    <string name="enter">Entrar</string>
+    <string name="forgot_pass">Esqueceu a senha</string>
+    <string name="signin">Registre-se</string>
+</resources>
